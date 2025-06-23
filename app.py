@@ -10,7 +10,6 @@ class DarkModeApp:
         self.root = root
         self.root.title("Model Training GUI")
         
-        # Set dark theme colors
         self.colors = {
             'bg': '#2B2B2B',
             'fg': '#FFFFFF',
@@ -21,12 +20,10 @@ class DarkModeApp:
             'error': '#FF5555',
             'info': '#BD93F9'
         }
-        
-        # Configure root window
+
         self.root.configure(bg=self.colors['bg'])
         self.root.geometry('1000x800')
         
-        # Initialize settings
         self.settings = {
             'model_save_path': '',
             'model_name': '',
@@ -238,7 +235,6 @@ class DarkModeApp:
         for key, value in self.settings.items():
             self.log_message(f"{key}: {value}", 'info')
         
-        # Here you would implement the actual training logic
         self.log_message("Training started...", 'success')
 
 if __name__ == "__main__":
